@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+
+<head th:fragment="head">
+    <meta charset="UTF-8"/>
+    <title th:text="${title}">Tour Title fits here</title>
+    <link rel="stylesheet" th:href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!--    <link rel="stylesheet" th:href="@{/css/styles.css}"/>-->
+</head>
+
+<body>
+<nav th:fragment="navigation">
+    <a href="/user">Go to User Page to check access</a>
+    <br>
+    <a href="/admin">Go to Admin Page to check access</a>
+    <br>
+</nav>
+</body>
+</html>
