@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Admin</title>
+</head>
+<body>
+
+<div th:if="${param.error}">
+    Invalid permission to access this page.
+</div>
+
+<h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!
+    <br>Admin Page
+    <br>This page will be used to ADD data to db
+</h1>
+
+<nav th:replace="fragments :: navigation"></nav>
+
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="Sign Out"/>
+</form>
+</body>
+</html>
