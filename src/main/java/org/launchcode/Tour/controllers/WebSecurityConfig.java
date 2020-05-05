@@ -1,4 +1,4 @@
-package org.launchcode.Tour;
+package org.launchcode.Tour.controllers;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
