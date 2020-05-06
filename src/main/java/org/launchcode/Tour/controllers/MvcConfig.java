@@ -1,4 +1,4 @@
-package org.launchcode.Tour;
+package org.launchcode.Tour.controllers;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
@@ -14,5 +14,6 @@ public class MvcConfig implements WebMvcConfigurer {
         registry.addViewController("/login").setViewName("login");  //login page
         registry.addViewController("/user").setViewName("user");    //user accessible page
         registry.addViewController("/admin").setViewName("admin");  //admin only accessible page
+        registry.addViewController("/error").setViewName("error");  //admin only accessible page
     }
 }

@@ -19,8 +19,67 @@
 
 <nav th:replace="fragments :: navigation"></nav>
 
+<h1>Add Site</h1>
+
+<form action="#" th:action="@{/admin}"method="post">
+
+    <div class="form-group">
+        <label>Name
+            <input type="text" th:field="${site.owner_name}" class="form-control" size="80"/>
+        </label>
+        <p class="error" th:errors="${site.owner_name}"></p>
+    </div>
+
+    <div class="form-group">
+        <label>Phone
+            <input  type="text" th:field="${site.phone}" class="form-control"size="80">
+        </label>
+        <p class="error" th:errors="${site.phone}"></p>
+    </div>
+    <div class="form-group">
+        <label>Contact Email
+            <input  type="text" th:field="${site.email}" class="form-control"size="80">
+        </label>
+        <p class="error" th:errors="${site.email}"></p>
+    </div>
+    <div class="form-group">
+        <label>Catch Phrase for Site
+            <input  type="text" th:field="${site.phrase}" class="form-control" size="80"/>
+        </label>
+        <p class="error" th:errors="${site.phrase}"></p>
+    </div>
+    <div class="form-group">
+        <label>Site Address (Number Street name, City, State Zip)
+            <textarea  type="text" th:field="${site.address}" class="form-control" rows="1" cols="80"></textarea>
+        </label>
+        <p class="error" th:errors="${site.address}"></p>
+    </div>
+    <div class="form-group">
+        <label>Description
+            <!--            <input th:field="${site.description}" class="form-control">-->
+            <textarea  type="text" th:field="${site.description}" class="form-control" rows="10" cols="80"></textarea>
+        </label>
+        <p class="error" th:errors="${site.description}"></p>
+    </div>
+
+    <!--    <div class="form-group">-->
+    <!--        <label>Type-->
+    <!--            <select th:field="${event.type}">-->
+    <!--                <option th:each="type : ${types}"-->
+    <!--                        th:value="${type}"-->
+    <!--                        th:text="${type.displayName}"-->
+    <!--                ></option>-->
+    <!--            </select>-->
+    <!--        </label>-->
+    <!--    </div>-->
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-success">
+    </div>
+</form>
+
 <form th:action="@{/logout}" method="post">
     <input type="submit" value="Sign Out" class="btn btn-success"/>
 </form>
+
 </body>
 </html>
