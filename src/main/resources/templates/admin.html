@@ -8,13 +8,13 @@
 
 <body class="container">
 
+<!--following div does not work to process access error to page-->
 <div th:if="${param.error}">
     Invalid permission to access this page.
 </div>
 
 <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!
-    <br>Admin Page
-    <br>This page will be used to ADD data to db
+    <br>Add site data to the database
 </h1>
 
 <nav th:replace="fragments :: navigation"></nav>
