@@ -9,11 +9,31 @@
 <body class="container">
 
 <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!
-    <br>User Page
-    <br>This page will be used to list sites on tour
+    <br>Here is a listing of all sites on tour
 </h1>
 
 <nav th:replace="fragments :: navigation"></nav>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Owner Name</th>
+        <th>Address</th>
+        <th>Phrase</th>
+        <th>Description</th>
+        <th>Contact Email</th>
+    </tr>
+    </thead>
+    <tr th:each="site : ${sites}">
+        <td th:text="${site.id}"></td>
+        <td th:text="${site.owner_name}"></td>
+        <td th:text="${site.address}"></td>
+        <td th:text="${site.phrase}"></td>
+        <td th:text="${site.description}"></td>
+        <td th:text="${site.email}"></td>
+    </tr>
+</table>
 
 <form th:action="@{/logout}" method="post">
     <input type="submit" value="Sign Out" class="btn btn-success"/>
