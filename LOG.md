@@ -30,3 +30,25 @@ Plans moving forward:<br>
 * Write code to enter data in db<br>
 * Evaluate and maybe add Bootstrap for formatting<br>
 * Update wire diagrams<br>
+
+## 5/4/2020 - Update
+
+Stories worked on:<br>
+* As an Admin, enter site data into MySQL database<br>
+* Able to setup site table: site.java is working<br>
+* Able to display input forms, post data to MySQL, return to form after form entry is posted.<br>
+* Successfully added Bootstrap back into project.<br>
+
+Code decisions:<br>
+* Spent a lot of time debugging; probably tried to code too much at once.<br>
+* Reduced database to single table for now; will add features table after getting map to work with markers for site locations.<br>
+
+Plans moving forward:<br>
+* List MySQL database contents in table on User page<br>
+* Get maps to show and center on Kansas City<br>
+* Review java syntax for live coding exercises<br>
+* Update wire diagrams<br>
+
+Parking Lot:<br>
+* Add features table after getting addresses in db to display on map and after implementing down select tables
+* Update sign in to include Spring Boot security registration
